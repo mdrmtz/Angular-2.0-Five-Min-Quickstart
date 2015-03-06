@@ -9,6 +9,24 @@
   
     <!-- The app component created in app.es6 -->
     <my-app></my-app>
+    <script>
+	  // Rewrite the paths to load the files
+	  /*
+	  	The System.paths property above specifies the paths to the following modules:
+
+		The Angular framework
+		Optional assertions for runtime type checking
+		The component to display on the page
+		*/
+	  System.paths = {
+	    'angular2/*':'/quickstart/angular2/*.js', // Angular
+	    'rtts_assert/*': '/quickstart/rtts_assert/*.js', //Runtime assertions
+	    'app': 'app.es6' // The my-app component
+	  };
+	  
+	  // Kick off the application
+	  System.import('app');
+	</script>
     
   </body>
 </html>
