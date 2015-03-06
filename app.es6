@@ -31,3 +31,7 @@ class MyAppComponent {
 The template above binds to a name property through the double-mustache syntax ({{ ... }}). The body of the constructor assigns "Alice" to the name property. When the template renders, "Hello Alice" appears instead of "Hello {{ name }}".
 */
 
+/*
+The bootstrap() function takes a component as a parameter, enabling the component (as well as any child components it contains) to render.
+*/
+bootstrap(MyAppComponent);
